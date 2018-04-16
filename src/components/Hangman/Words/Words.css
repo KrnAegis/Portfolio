@@ -1,0 +1,32 @@
+.chbtn {
+	width: 30%;
+
+	text-align: left;
+	margin: 10px;
+}
+
+.chbtn:hover {
+	box-shadow: 0 12px 8px 0 rgba(0,64,160,0.5), 0 10px 25px 0 rgba(0,64,160,0.5);
+}
+
+.chbtn:active {
+	background-color: #3e8e41;
+    box-shadow: 0 5px  rgba(0,64,160,0.5);
+    transform: translateY(4px);
+}
+
+.word {
+  height: 100%;
+  position: fixed;
+}
+
+.home {
+  margin: 50px 0px 49.5px 0;
+
+
+
+  height: 100%;
+  min-height: 100%;
+
+
+}

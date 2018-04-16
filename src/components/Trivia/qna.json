@@ -1,0 +1,84 @@
+{"trivia":[
+
+		{
+			"question":"Which of these animal is NOT an apex predator?" ,
+			"c1":"Lion" ,
+			"c2":"Great White Shark" ,
+			"c3":"Orca" ,
+			"c4":"Grizzly Bear",
+			"answer":"Great White Shark"
+		},
+		{
+			"question":"What do you call a group of penguins?" ,
+			"c1":"Huddle" ,
+			"c2":"Clutch" ,
+			"c3":"Flock" ,
+			"c4":"Tuxes" ,
+			"answer":"Huddle"
+		},
+		{
+			"question":"What do you call a male honey bee?" ,
+			"c1":"Worker" ,
+			"c2":"Defender" ,
+			"c3":"Drone" ,
+			"c4":"Carriers" ,
+			"answer":"Drone"
+		},
+		{
+			"question":"What does 'Grizzly' in Grizzly bear mean?" ,
+			"c1":"Big" ,
+			"c2":"Bear" ,
+			"c3":"Brown" ,
+			"c4":"Ferocious" ,
+			"answer":"Bear"
+		},
+		{
+			"question":"Which of these animals have caused most death in Australia?" ,
+			"c1":"Horses" ,
+			"c2":"Brown Snakes" ,
+			"c3":"Box Jellyfish" ,
+			"c4":"Crocodile" ,
+			"answer":"Horses"
+		},
+		{
+			"question":"The human male has a bite force of about 150 psi (Pounds Squre Inch), what is the bite force of hyenas?" ,
+			"c1":"2,350 psi" ,
+			"c2":"1,100 psi" ,
+			"c3":"4,710 psi" ,
+			"c4":"3,700 psi" ,
+			"answer":"3,700 psi"
+		},
+		{
+			"question":"Which of these species of animal has been around the Earth the longest?" ,
+			"c1":"Horseshoe Crab" ,
+			"c2":"Nautilus" ,
+			"c3":"Blue Whale" ,
+			"c4":"Sponge" ,
+			"answer":"Sponge"
+		},
+		{
+			"question":"Which of these animal is fastest animal on land per body length?" ,
+			"c1":"Southern California mite" ,
+			"c2":"Cheetah" ,
+			"c3":"Peregrine Falcon" ,
+			"c4":"Brown Hare" ,
+			"answer":"Southern California mite"
+		},
+		{
+			"question":"Which animal has the best hearing sense?",
+			"c1":"Greater Wax Moth" ,
+			"c2":"Brown Long-eared Bat" ,
+			"c3":"dolphin" ,
+			"c4":"Jaguar" ,
+			"answer":"Greater Wax Moth"
+		},
+		{
+			"question":"Which of these animal is the slowest?",
+			"c1":"Giant Tortise" ,
+			"c2":"Three-toed Sloth" ,
+			"c3":"Starfish" ,
+			"c4":"Banana Slug" ,
+			"answer":"Three-toed Sloth"
+		}
+
+]}

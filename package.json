@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000/",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "radium": "^0.22.1",
+    "react": "^16.0.0",
+    "react-animations": "^1.0.0",
+    "react-dom": "^16.0.0",
+    "react-responsive-spritesheet": "^2.3.3",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.16",
+    "react-sprite-animator": "^1.1.4",
+    "react-svg": "^2.2.14",
+    "svg-react": "^1.0.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

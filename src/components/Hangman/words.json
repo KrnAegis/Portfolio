@@ -1,0 +1,53 @@
+{"words":[
+
+		{
+			"word":"Plastic Bottle" ,
+			"hint":"Container",
+			"category":"Everyday object"
+		},
+		{
+			"word":"Spoon" ,
+			"hint":"Utensile",
+			"category":"Everyday object"
+		},
+		{
+			"word":"Bald Eagle" ,
+			"hint":"Bird",
+			"category":"Animal"
+		},
+		{
+			"word":"Hyena" ,
+			"hint":"Scavanger in African plane",
+			"category":"Animal"
+		},
+		{
+			"word":"Brazil" ,
+			"hint":"Located in South America",
+			"category":"Country"
+		},
+		{
+			"word":"Egypt" ,
+			"hint":"Home of pyramids",
+			"category":"Country"
+		},
+		{
+			"word":"Soccer" ,
+			"hint":"Mainly played with a foot",
+			"category":"Sports"
+		},
+		{
+			"word":"Baseball" ,
+			"hint":"Played with a bat",
+			"category":"Sports"
+		},
+		{
+			"word":"Fried Chicken" ,
+			"hint":"Cooked in hot oil",
+			"category":"Food"
+		},
+		{
+			"word":"French Fries" ,
+			"hint":"Made with potatos",
+			"category":"Food"
+		}
+]}

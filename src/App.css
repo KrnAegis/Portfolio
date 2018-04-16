@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  font-family: 'Concert One', cursive;
+  
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.subBtnColor {
+  background-color: #54351E;
+}
+
+.subBtnColor:hover {
+  background-color: #EAC67A;
+}
+
+.btnBig {
+  height:10vh;
+  font-size: 7vh;
+}
+
+.btnMed {
+  height:7vh;
+  font-size:4vh;
+}
+
+.container {
+    min-height: 100%; 
+    height: 100vh; 
+    vertical-align:bottom;
+    margin: 0 auto;
+}
+
+.pre-home {
+  padding:24vh 0 25vh 0;
+
+}
+
+.home {
+  margin: 50px 0px 49.5px 0;
+  padding:8% 0 17% 0;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+/* label color */
+.input-field label {
+  color: #54351E;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #54351E !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 2px solid #54351E !important;
+ box-shadow: 0 1px 0 0 #54351E !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 2px solid #54351E;
+ box-shadow: 0 1px 0 0 #54351E;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 2px solid #54351E;
+ box-shadow: 0 1px 0 0 #54351E;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #54351E;
+}
+
+h4 {
+  color:#54351E;
+}
+
+h2 {
+  color:#54351E;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

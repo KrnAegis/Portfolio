@@ -1,0 +1,75 @@
+button {
+	color: white;
+	margin: 0 auto;	
+	width: 100%;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 150px;
+	color:#AA00FF;
+}
+
+h4 {
+	color: white ;
+}
+
+h5 {
+	color: #54351E ;
+}
+
+img {
+	width:auto;
+	height:35vh;
+	max-width: 100%;
+}
+.or {
+	text-align: center;
+}
+.g-signin2 {
+	text-align: center;
+}
+
+.imgCenter {
+    margin: auto;
+    width: 50%;
+}
+
+.gify {
+    margin: 50px 0px 45px 0;
+    padding:4% 0 10% 0;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+.textbg {
+	background-color: rgba(234, 198, 122, 0.8);
+	padding: 0px 5px 5px 5px;
+	margin: 0 auto;
+	border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+
+.searchbg {
+	background-color: rgba(84, 53, 30, 0.5);
+	padding: 5px 10px 15px 5px;
+	margin: 0 auto;
+	display:inline;
+	border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.historybg {
+	background-color: rgba(234, 198, 122, 0.8);
+	padding: 0px 5px 5px 5px;
+	margin: 0 auto;
+	border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+

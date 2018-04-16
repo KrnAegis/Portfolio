@@ -1,0 +1,20 @@
+
+
+.footer-container {
+	text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.page-footer {
+	padding: 10px;
+}
+
+.footer { 
+    position: fixed; 
+    left: 0 ; right: 0; bottom: 0; 
+    height:-100px;
+    z-index: 100000;
+}
