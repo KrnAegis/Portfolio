@@ -167,7 +167,16 @@ class Home extends Component {
                         <div className="text">MongoDB</div>
                       </div>
                 </CardPanel>
-              </div>          
+              </div>
+              <div className="col l12">
+                <h5>
+                  <a href="https://github.com/KrnAegis/Portfolio" 
+                       target="_blank"
+                       className="homeLink">
+                       Code for this portfolio
+                  </a>
+                </h5>
+              </div>         
             </div>
           </div>
           <Parallax imageSrc={lowerPara} />

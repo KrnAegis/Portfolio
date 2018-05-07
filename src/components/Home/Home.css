@@ -61,3 +61,7 @@
   background-repeat: no-repeat;
   background: url("../../bgimg/notebook.jpg") center center fixed;
 }
+
+.homeLink:hover {
+  color: #ffe44e;
+}
