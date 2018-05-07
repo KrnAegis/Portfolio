@@ -117,20 +117,9 @@ constructor() {
             </div>
           <Footer/>
         </div>
-
-
-    )
+      )
+    }
   }
-}
-  // render() {
-  //   return (
-  //     <div className="App">
-  //       <Header user={this.state.user}/>
-  //       <Route exact path="/" render={() => <Nickname user={this.state.user}/>}/>
-  //       <Route exact path="/home" render={() => <Home user={this.state.user}/>}/>
-  //     </div>
-  //   );
-  // }
 }
 
 export default App;

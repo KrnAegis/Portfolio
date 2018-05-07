@@ -13,7 +13,7 @@ class Header extends Component {
       <div>
         <nav className="nav-extended">
           <div className="nav-wrapper grey darken-4">
-          <div class="brand-logo center img-wrap">
+          <div className="brand-logo center img-wrap">
             <img className="logoStyle" src={logo} />
           </div>
             <ul className="left hide-on-med-and-down">
@@ -48,7 +48,7 @@ class Header extends Component {
             </ul>
             {this.props.user ? <a className="brand-logo right">Hi {this.props.user}!</a> : ""}
           </div>
-            <div class="nav-content grey darken-3">
+            <div className="nav-content grey darken-3">
               <div className="row">
                 <form className="col l2" onSubmit={this.props.handleSubmit}>
                   <div className="input-field nickInput">
