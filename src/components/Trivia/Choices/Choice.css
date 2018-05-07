@@ -6,29 +6,29 @@
 }
 
 .chcbtn:hover {
-	background-color: #098e09;
-	box-shadow: 0 12px 8px 0 rgba(9,142,9,0.5), 0 10px 25px 0 rgba(9,142,9,0.5);
+	background-color: #fdd835 ;
+	box-shadow: 0 6px 8px 0 rgba(255,238,88,0.5), 0 10px 10px 0 rgba(255,238,88,0.5);
 }
 
 .chcbtn:active {
-	background-color: #098e09;
-    box-shadow: 0 5px  rgba(9,142,9,0.5);
+	background-color: #fdd835;
+    box-shadow: 0 5px  rgba(255,238,88,0.5);
     transform: translateY(4px);
 }
 
 .slGreen {
-	background-color:#68ff68;
+	background-color:#ffd180;
 
 }
 
 .lGreen {
-	background-color:#42ff42;
+	background-color:#ffab40;
 }
 
 .mGreen {
-	background-color:#30ff30;
+	background-color:#ff9100;
 }
 
 .dGreen {
-	background-color:#18ce18;
+	background-color:#ff6d00;
 }

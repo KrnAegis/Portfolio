@@ -1,20 +1,41 @@
-
-
-.footer-container {
-	text-align: center;
-    margin: 0 auto;
-    width: 50%;
-    overflow: hidden;
-    height: 100%;
+.footerContact {
+	text-align: left;
 }
 
-.page-footer {
-	padding: 10px;
+.icons {
+	height: 20px;
+	width: 20px;
 }
 
-.footer { 
-    position: fixed; 
-    left: 0 ; right: 0; bottom: 0; 
-    height:-100px;
-    z-index: 100000;
+.icOverlay {
+	position: relative;
+	margin:0 auto !important;	
 }
+
+.icImg {
+  display: block;
+  font-size: 40px;
+  margin:0 auto;
+  padding:5px;
+}
+
+.icImg:hover {
+  color: #42a5f5;
+}
+
+.icSlideUp {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #212121;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.icOverlay:hover .icSlideUp {
+  height: 50%;
+}
+

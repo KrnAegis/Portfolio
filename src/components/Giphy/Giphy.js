@@ -7,121 +7,179 @@ import gifyBG from "../../bgimg/ctvwp.jpeg";
 
 var ranNum = ""
 
-const containerStyle = {
-  backgroundSize: '100% 100%',
-  backgroundRepeat: 'repeat',
-  backgroundImage: `url(${gifyBG})`
-};
+const oneColor = {
+  color: '#ff8f2d'
+}
 
+const twoColor = {
+  color: '#2d49ff'
+}
+
+const threeColor = {
+  color:'#ff5f29'
+};
 
 class Giphy extends Component {
   state = {
     result: {},
     search: "",
+    value:"",
     ready: null,
-    history:[]
+    history:[],
+    color: {
+        color: 'rgb(0,0,0)'},
+    intervalColor:"",
+    transition: 'color 0.2s'
   };
 
 
 
-  // Loading gif as default
+  // Loading gif as default and color change
   componentDidMount() {
     this.searchGif("Loading");
-    console.log("this is response", this.state.result)
+    console.log("this is response", this.state.result);
+    var intervalColor = setInterval(this.colorChange, 200);
+       // store intervalColor in the state so it can be accessed later:
+    this.setState({
+      intervalColor:intervalColor
+    });
   };
 
-
+  componentWillUnmount() {
+   // use intervalColor from the state to clear the interval
+   clearInterval(this.state.intervalColor);
+  };
+//running search through gify API and obtain result
   searchGif = query => {
     search(query)
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
   };
 
+//handle search value and sets search state for query
   handleInputChange = event => {
-    const value = event.target.value;
-    const name = event.target.name;
     this.setState({
-      [name]: value
+      value: event.target.value
     });
-
-    if (event.key === "Enter") {
-      this.handleFormSubmit(event);
       this.setState({
-        search:""
+        search:this.state.value.trim()
+      })
+
+  };
+
+//handles running searchGif function and reset searches
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.search != "") {
+      this.setState({ready:true})
+      this.searchGif(this.state.search);
+      this.state.history.push(this.state.search)
+      ranNum = Math.floor(Math.random() * (this.state.result.data.length - 6));
+      this.setState({
+        value:""
+      })
+    } else {
+      console.log("empty")
+      this.setState({
+        value:""
       })
     }
   };
 
-  handleFormSubmit = event => {
-    if (this.state.search != "") {
-      event.preventDefault();
-      this.setState({ready:true})
-      this.searchGif(this.state.search);
-      this.state.history.push(this.state.search)
-      ranNum = Math.floor(Math.random() * (this.state.result.data.length - 5));
-      console.log("This is history of searches: ", this.state.history)
-      console.log("searched", this.state.search)
-      console.log("this is API", search)
-      console.log("this is result", this.state.result)
-    } else {
-      console.log("empty")
-    }
-  };
+//function for color change
+  colorChange = event => {
+    var r = Math.floor(Math.random() * (255) - 100);
+    var g = Math.floor(Math.random() * (255) - 20);
+    var b = Math.floor(Math.random() * (255) + 200);
+    var rgb = 'rgb' + "(" + r.toString() + "," + g.toString() + "," + b.toString() + ")"
+    console.log("this is r,g,b",r, g, b)
+    console.log("this is rgb", rgb)
+    this.setState({
+      color:{
+        color:rgb
+      }
+    });
+  }
 
   render() {
     return (
-      <div className="gify" style={containerStyle}>
-        <div className="container">
-          <h2 className="textbg">Welcome to Giphy generator! {this.props.user}</h2>
-          <br></br>
-          <br></br>
-
-            <div class="col s6 offset-s3">
-              <h4 className="searchbg">Search here!:
-              <div className="input-field inline">
-                <input type="text"
-                       name="search"
-                       value={this.state.search}
-                       onChange={this.handleInputChange}
-                       onKeyUp={this.handleInputChange} />
-              </div>
-              </h4>
-          </div>
-          <h4>Your search history</h4>
+      <div className="more">
+        <div className="gifHeading">
+          <h2 style={oneColor}>Welcome to <span style={this.state.color}>Giphy</span> generator! {this.props.user}</h2>
+          <h4 style={twoColor}>Your search history</h4>
           <div>            
               {this.state.history.length > 0 ? 
-                <h5 className="historybg">{this.state.history.join(", ")}</h5> 
-                : <h5 className="textbg">nothing here!</h5>}            
+                <h5 style={threeColor}>{this.state.history.join(", ")}</h5> 
+                : <h5 style={threeColor}>nothing here!</h5>}            
           </div>
-          <br></br>
-            <div>
-                {this.state.ready && this.state.result.data[ranNum] != undefined
-                  ? <div id="disGif">
-                      <div className="row">
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum].images.downsized.url}/>
-                        </div>
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum+1].images.downsized.url}/>
-                        </div>
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum+2].images.downsized.url}/>
-                        </div>
+        </div>
+        <div className="gify">
+          <div className="container">
+            <div className="gifWrap">
+              <div className="row">
+                <nav className="gifNav grey darken-3 col l11">
+                  <div className="nav-wrapper">
+                    <form onSubmit={this.handleFormSubmit}>
+                      <div className="input-field">
+                        <input type="search"
+                               name="search"  
+                               id="search"
+                               value={this.state.value}
+                               onChange={this.handleInputChange}
+                               onKeyUp={this.handleInputChange} />
                       </div>
-                      <div className="row">
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum+3].images.downsized.url}/>
+                    </form>
+                  </div>
+                </nav>
+                <div className="col l1 gifIconStyle">
+                  <i className="material-icons medium icon-white">search</i>
+                </div>
+              </div>
+              <br></br>
+                <div>
+                    {this.state.ready && this.state.result.data[ranNum] != undefined
+                      ? <div id="disGif">
+                          <div className="row">
+                            <div className="col s4 imgCenter">
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>
+                            </div>
+                            <div className="col s4 imgCenter">
+                              {this.state.result.data[ranNum+1] != undefined ?
+                              <img className="gifImg" src={this.state.result.data[ranNum+1].images.downsized.url}/> 
+                              :
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>}
+                            </div>
+                            <div className="col s4 imgCenter">
+                              {this.state.result.data[ranNum+1] != undefined ?
+                              <img className="gifImg" src={this.state.result.data[ranNum+2].images.downsized.url}/> 
+                              :
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>}>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col s4 imgCenter">
+                              {this.state.result.data[ranNum+1] != undefined ?
+                              <img className="gifImg" src={this.state.result.data[ranNum+3].images.downsized.url}/> 
+                              :
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>}                            </div>
+                            <div className="col s4 imgCenter">
+                              {this.state.result.data[ranNum+1] != undefined ?
+                              <img className="gifImg" src={this.state.result.data[ranNum+4].images.downsized.url}/> 
+                              :
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>}
+                            </div>
+                            <div className="col s4 imgCenter">
+                              {this.state.result.data[ranNum+1] != undefined ?
+                              <img className="gifImg" src={this.state.result.data[ranNum+5].images.downsized.url}/> 
+                              :
+                              <img className="gifImg" src={this.state.result.data[ranNum].images.downsized.url}/>}
+                            </div>
+                          </div>
                         </div>
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum+4].images.downsized.url}/>
-                        </div>
-                        <div className="col s4 imgCenter">
-                          <img src={this.state.result.data[ranNum+5].images.downsized.url}/>
-                        </div>
-                      </div>
-                    </div>
-                  : <h3>No Results to Display.</h3>}
+                      : <h3 style={twoColor}>No Results to Display.</h3>}
+                </div>
             </div>
+          </div>
         </div>
       </div>
     );

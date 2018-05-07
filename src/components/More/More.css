@@ -1,34 +1,80 @@
-button {
-	color: white;
-	margin: 0 auto;	
-	width: 100%;
-}
-h1 {
-	text-align: center;
-	margin-bottom: 150px;
-	color:#AA00FF;
-}
-
-h2 {
-	color: #54351E;
-}
-.or {
-	text-align: center;
-}
-.g-signin2 {
-	text-align: center;
-}
-
 .more {
-  margin: 50px 0px 49.5px 0;
-  padding:3% 0 3% 0;
+  margin: 0 auto !important;
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.moreHeader {
+	border-bottom: solid 10px;
+	border-color: #42a5f5;
+	background: url("../../bgimg/pebbles.jpg") center center fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.caro {
+	border-bottom: solid 10px;
+	border-color: #42a5f5;
+	height:75vh !important;
+}
+
+.imgCard {
+	border-style: ridge;
+	border-width: 10px;
+	border-color: char;
+	background-color: #0a5d8a;
+}
+
+.imgStyle {
+	height: 100%;
+}
+
+.leftImg {
+	background-color:#ffb286;
+	border-right-style: ridge;
+	border-right-width: 10px;
+}
+
+.rightCard {
+	background-color: #88beff;
 }
 
 .floLeft {
 	text-align: left !important;
 }
 
+.hrkStyle:hover {
+	opacity: 1;
+	color: orange !important;
+}
+
+.gthbStyle:hover {
+	opacity: 1;
+	color: orange !important;
+}
+
+.card-reveal {
+	transform: translateY(-50%) !important;
+	transition: 1s ease !important;
+	background-color: #EEEEEE !important;
+}
+
+
+.cardStyle, .card-image {
+	height:100% !important;
+}
+
+.chip {
+	font-size: 25px;
+	color: #EEEEEE;
+	background-color: #212121;
+}
+
 img {
 	width:100%;
+	margin:0 auto;
 }

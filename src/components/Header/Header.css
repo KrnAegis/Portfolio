@@ -1,28 +1,17 @@
-button {
-	color: white;
-	margin: 0 auto;	
-	width: 100%;
-}
-h1 {
-	text-align: center;
-	margin-bottom: 150px;
-	color:#AA00FF;
-}
-
 h6 {
 	color:white;
 }
 
 .innerLi {
-	background-color: #54351E;
+	background-color: #424242;
 }
 
 .innerLi:hover {
-	background-color: #EAC67A !important;
+	background-color: #90a4ae !important;
 }
 
 li:hover {
-  background-color: rgba(234, 198, 122, 0.8);
+  background-color: rgba(144, 164, 174, 1);
 
 }
 
@@ -30,22 +19,31 @@ li {
 	min-width: 100px;
 }
 
-nav {
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100000;
- 
-}
-
-.or {
-	text-align: center;
-}
-.g-signin2 {
-	text-align: center;
-}
-
 .header-font {
 	font-size: 64px;
+}
+
+.nickInput {
+	margin-top: 4vh !important;
+	margin-bottom: 2vh !important;
+}
+
+.img-wrap {
+  width: 175px;
+  height: 175px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  z-index: 10;
+}
+
+div > .logoStyle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
 }

@@ -3,12 +3,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./GameOver.css";
 
-const gmovStyle = {
-  color: '#e53d3d',
-  textShadow:
-   '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
-}
-
 class GameOver extends Component {
 
   state = {
@@ -48,7 +42,7 @@ class GameOver extends Component {
   render() {
     return(
       <div>
-        <h2 style={gmovStyle}>Game Over!!</h2>
+        <h2 className="red-text text-accent-3">Game Over!!</h2>
         <div className="row">
           <div className="col s6 offset-s3">
             <h2>Your Score is <div style={this.state.color}>{this.props.right}/10!</div></h2>

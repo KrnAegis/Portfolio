@@ -49,5 +49,55 @@
 			"word":"French Fries" ,
 			"hint":"Made with potatos",
 			"category":"Food"
+		},
+		{
+			"word":"Supermarket" ,
+			"hint":"Buy groceries",
+			"category": "Place"			
+		},
+		{
+			"word":"Bathroom",
+			"hint":"You can wash here",
+			"category":"Place"			
+		},
+		{
+			"word":"Cup of Joe",
+			"hint":"Common drink",
+			"category":"A Phrase"			
+		},
+		{
+			"word":"Let Her Rip",
+			"hint":"start!",
+			"category":"A Phrase"			
+		},
+		{
+			"word":"Husband",
+			"hint":"Spouse",
+			"category":"Family"			
+		},
+		{
+			"word":"Paradox",
+			"hint":"Killing your past self",
+			"category":"Phenomenon"			
+		},
+		{
+			"word":"Blizzard",
+			"hint":"Icy",
+			"category":"Weather"			
+		},
+		{
+			"word":"Peekaboo",
+			"hint":"Baby game",
+			"category":"A Phrase"			
+		},
+		{
+			"word":"Vodka",
+			"hint":"Made with potatos",
+			"category":"Drink"			
+		},
+		{
+			"word":"Icebox",
+			"hint":"Keep things cold",
+			"category":"everyday Object"			
 		}
 ]}

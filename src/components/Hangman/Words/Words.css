@@ -17,16 +17,4 @@
 
 .word {
   height: 100%;
-  position: fixed;
-}
-
-.home {
-  margin: 50px 0px 49.5px 0;
-
-
-
-  height: 100%;
-  min-height: 100%;
-
-
 }

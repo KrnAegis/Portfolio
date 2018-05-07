@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Toast} from "react-materialize"
 import './App.css';
 import { Route, Link } from 'react-router-dom';
 import Header from './components/Header/Header.js';
@@ -32,33 +33,55 @@ class App extends Component {
 constructor() {
     super()
     this.state = {
-      user: null,
+      user: "Guest",
+      value:""
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   };
 
+  handleChange = event => {
+    console.log("value ", event.target.value)
+    if (event.target.value.length < 11) {
+     this.setState({
+      value: event.target.value
+    });
+    } else {
+      alert("Too long")
+    }
+  };
 
-  handleSubmit = event => {
-    event.preventDefault()
+  handleSubmit = (event) => {
+  event.preventDefault();
+  console.log("handleSubmit ", event.target.value)
+    if (event.target.value != undefined) {
     console.log('handleSubmit')
     this.setState({ 
-      user: this.element.value 
+      user: this.state.value 
+    })
+    this.setState({
+      value:""
     })
     console.log("this is user" + this.state.user);
+    } else {
+      alert("User undefined!")
+    }
   };
 
   render() {
     if (this.state.user) {
       return (
         <div className="App">
-          <Header user={this.state.user}/>
+          <Header user={this.state.user} 
+                  handleSubmit={this.handleSubmit} 
+                  value={this.state.value} 
+                  handleChange={this.handleChange}/>
           <Route exact path="/" render={() => <Home user={this.state.user}/>}/>
           <Route exact path="/home" render={() => <Home user={this.state.user}/>}/>
           <Route exact path="/giphy" component={() => <Giphy user={this.state.user}/>}/>
           <Route exact path="/trivia" component={() => <Trivia user={this.state.user}/>}/>
           <Route exact path="/hangman" component={() => <Hangman user={this.state.user}/>}/>
           <Route exact path="/more" component={() => <More user={this.state.user}/>}/>
-
           <Footer/>
         </div>
         )

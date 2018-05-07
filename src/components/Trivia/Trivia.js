@@ -8,19 +8,6 @@ import Choice from "./Choices/Choice.js"
 import Correct from "./Correct/Correct.js"
 import GameOver from "./GameOver/GameOver.js"
 import Wrong from "./Wrong/Wrong.js"
-import triviaBG from "../../bgimg/rvwp.jpeg";
-
-const containerStyle = {
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${triviaBG})`
-};
-
-const questStyle = {
-  color: '#098e09',
-  textShadow:
-   '-1px -1px 0 #54351E, 1px -1px 0 #54351E, -1px 1px 0 #54351E, 1px 1px 0 #54351E'
-}
 
 class Trivia extends Component {
 
@@ -37,6 +24,7 @@ state = {
     intervalColor:""
 };
 
+//for color change
 componentDidMount() {
   var intervalColor = setInterval(this.colorChange, 200);
      // store intervalColor in the state so it can be accessed later:
@@ -52,17 +40,18 @@ componentWillUnmount() {
 
 //function for color change
 colorChange = event => {
-  var r = Math.floor(Math.random() * (255));
-  var g = 255;
-  var b = Math.floor(Math.random() * (255));
+  var r = Math.floor(Math.random() * (255) + 200);
+  var g = Math.floor(Math.random() * (255) - 100);
+  var b = Math.floor(Math.random() * (255) - 100);
   var rgb = 'rgb' + "(" + r.toString() + "," + g.toString() + "," + b.toString() + ")"
   this.setState({
     color:{
       color:rgb
     }
   });
-}
+};
 
+//handdles game start condition
 handleReady = event => {
   var num = this.state.count
   event.preventDefault();
@@ -73,7 +62,7 @@ handleReady = event => {
 
 };
 
-
+//handles question answers and que of questions
 handleSubmit = event => {
   console.log("clicking next")
   var num = this.state.count
@@ -97,6 +86,7 @@ handleSubmit = event => {
     console.log(this.state.right)
 };
 
+//handles user choice made
 handleChoice = event => {
   this.setState({
     userAnswer:event.target.value
@@ -106,6 +96,8 @@ handleChoice = event => {
   })
 };
 
+
+//handles starting game over
 handleReset = event => {
   this.setState({
     ready: false,
@@ -121,9 +113,9 @@ handleReset = event => {
   render() {
     if (!this.state.ready && !this.state.answered && this.state.count < 10) {
       return(
-        <div className="triContainer" style={containerStyle}>
+        <div className="triContainer">
           <div className="container">
-            <h2 style={questStyle} > Do you know your Animals, {this.props.user}?</h2>
+            <h2 className="questStyle" > Do you know your Animals, {this.props.user}?</h2>
             <h2 style={this.state.color} > Lets play animal trivia!</h2>
               <div className="row">
                 <button className="btn btnBig subBtnColor col s2 offset-s5"
@@ -138,7 +130,7 @@ handleReset = event => {
     )
     } else if (this.state.ready && !this.state.answered && this.state.count < 11) {
       return(
-        <div className="triContainer" style={containerStyle}>
+        <div className="triContainer">
           <div className="container">
             <Question qna={this.state.qna} count={this.state.count}/>
             <Choice qna={this.state.qna} answered={this.handleChoice} />
@@ -147,7 +139,7 @@ handleReset = event => {
         )
     } else if (this.state.answered && this.state.correct == this.state.userAnswer && this.state.count < 11) {
       return(
-        <div className="triContainer" style={containerStyle}>
+        <div className="triContainer">
           <div className="container">
             <Correct answer={this.state.correct} submit={this.handleSubmit} />
           </div>
@@ -155,7 +147,7 @@ handleReset = event => {
         )
     } else if (this.state.answered && this.state.correct != this.state.userAnswer && this.state.count < 11){
       return(
-        <div className="triContainer" style={containerStyle}>
+        <div className="triContainer">
           <div className="container">
             <Wrong answer={this.state.correct} submit={this.handleSubmit} />
           </div>
@@ -163,7 +155,7 @@ handleReset = event => {
         )
     } else if (this.state.count >= 11) {
       return (
-        <div className="triContainer" style={containerStyle}>
+        <div className="triContainer">
           <div className="container">
             <GameOver right={this.state.right} reset={this.handleReset} />
           </div>
