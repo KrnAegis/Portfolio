@@ -169,7 +169,7 @@ class Home extends Component {
                 </CardPanel>
               </div>
               <div className="col l12">
-                <h5>
+                <h5 className="gitLink">
                   <a href="https://github.com/KrnAegis/Portfolio" 
                        target="_blank"
                        className="homeLink">

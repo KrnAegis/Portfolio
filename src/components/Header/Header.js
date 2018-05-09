@@ -50,7 +50,7 @@ class Header extends Component {
           </div>
             <div className="nav-content grey darken-3">
               <div className="row">
-                <form className="col l2" onSubmit={this.props.handleSubmit}>
+                <form className="col l3" onSubmit={this.props.handleSubmit}>
                   <div className="input-field nickInput">
                     <input 
                         value={this.props.value}
@@ -58,12 +58,12 @@ class Header extends Component {
                         id="nickname" 
                         type="text" 
                         class="validate"
-                        data-length="10" 
+                        data-length="15" 
                     />
                     <label for="nickname">Don't want to be {this.props.user}? Click here!</label>
                   </div>
                 </form>
-                <div className="col l4 offset-l6">
+                <div className="col l4 offset-l5">
                   <span className="nav-title">Welcome to Hyung's portfolio</span>
                 </div>
               </div>

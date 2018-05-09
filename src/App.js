@@ -42,7 +42,7 @@ constructor() {
 
   handleChange = event => {
     console.log("value ", event.target.value)
-    if (event.target.value.length < 11) {
+    if (event.target.value.length < 16) {
      this.setState({
       value: event.target.value
     });
@@ -54,7 +54,7 @@ constructor() {
   handleSubmit = (event) => {
   event.preventDefault();
   console.log("handleSubmit ", event.target.value)
-    if (event.target.value != undefined) {
+    if (this.state.value !== undefined && this.state.value.replace(/\s/g, '').length !== 0) {
     console.log('handleSubmit')
     this.setState({ 
       user: this.state.value 
